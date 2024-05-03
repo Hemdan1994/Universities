@@ -1,0 +1,1 @@
+export const NavLink = ({ children }) => <div>{children}</div>;
