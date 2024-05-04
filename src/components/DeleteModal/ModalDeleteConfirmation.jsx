@@ -1,4 +1,4 @@
-import './modal.css';
+import './modal.css'
 
 const ModalDeleteConfirmation = ({ showModal, selectedUniversity, confirmDelete, setShowModal }) => {
   return (

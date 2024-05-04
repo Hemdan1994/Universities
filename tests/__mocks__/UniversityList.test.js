@@ -4,7 +4,15 @@ import UniversityList from '../../src/screens/UniversityList';
 
 // Mock dependencies
 jest.mock('../../src/components/DeleteModal/modal.css', () => ({}));
-jest.mock('../../src/hooks/useUniversities');
+jest.mock('../../src/hooks/useUniversites', () => ({
+  useUniversites: () => ({
+    data: [
+      { id: 1, name: 'University A' },
+      { id: 2, name: 'University B' }
+    ],
+    dataUpdatedAt: Date.now() // Simulate data update time
+  })
+}));
 jest.mock('react-router-dom', () => ({
   NavLink: ({ children }) => <div>{children}</div>,
 }));
